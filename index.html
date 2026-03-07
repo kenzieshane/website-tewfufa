@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆腐水 - Tew Fu Sui</title>
+    <meta property="og:title" content="Tew Fu Fa" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://tewfufa.page.gd" />
+<meta property="og:image" content="https://img-global.cpcdn.com/recipes/d394662c4cc85106/640x640sq80/photo.webp" />
+    <link rel="stylesheet" href="index.css">
+    <style>
+        :root {
+            --forest-green: #1a2e1a;
+            --paper-cream: #f4f1ea;
+            --earth-brown: #3d2b1f;
+            --accent-orange: #bc6c25;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-cream);
+            color: var(--forest-green);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-parallax {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1974&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .glass-nav {
+            background: rgba(26, 46, 26, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-card {
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(26, 46, 26, 0.1);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--paper-cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--forest-green);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">豆腐水 &nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="menu" id="menu">
+            <a href="#home" class="link">Tentang</a>
+            <a href="#about" class="link">Khasiat</a>
+            <a href="#menu" class="link">Sejarah</a>
+            <a href="" style=text-decoration:none>&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="fade-in">
+            <span class="hero-subtitle">Minuman Khas Bangka Belitung</span>
+            <h1 class="hero-title">豆腐水</h1>
+            <p class="hero-desc">豆腐水 (Tew Fu Sui) merupakan minuman khas bergizi yang berasal dari Bangka, tepatnya kota Pangkalpinang. Tew Fu Sui terbuat dari kacang kedelai. Biasanya minuman ini kebanyakan dibuat oleh masyarakat keturunan Cina. Tew Fu Sui biasanya dijual pada pagi hari dan juga malam hari. Kegiatan meminum fu sui disebut dengan istilah Musoi.</p>
+            <a href="#menu" class="hero-btn">Selam Dunia Susu Kedelai Bangka</a>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <span class="about-subtitle">Mula awal</span>
+            <h2 class="about-title">Pulau Bangka</h2>
+            <p class="about-text mb-6">
+                Pulau Bangka tidak hanya dikenal dengan keindahan alam dan kekayaan tambangnya, tetapi juga ragam kuliner tradisionalnya. Salah satu minuman khas yang semakin diminati oleh masyarakat lokal maupun wisatawan adalah Tew Fu Sui.
+            </p>
+            <a style="color:#000000"class="link" href="https://wonderful.pangkalpinangkota.go.id/tew-fu-sui/">- Wonderful Pangkalpinang</a>
+            <a style="color:#000000"class="link" href="https://rri.co.id/index.php/daerah/1012718/tew-fu-sui-minuman-khas-bangka">- RRI</a>
+        </div>
+        <div class="about-image">
+            <img src="peta.webp" class="about-img">
+            <div class="about-img-border"></div>
+        </div>
+    </section>
+
+    <!-- Signature Menu -->
+    <section id="menu" class="menu-section">
+        <div class="menu-header">
+            <h2 class="menu-title">Lihat Juga:</h2>
+            <div class="menu-title-line"></div>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- Menu Item 1 -->
+            <div class="menu-card">
+                <img src="https://img-global.cpcdn.com/recipes/d394662c4cc85106/640x640sq80/photo.webp" alt="Tew Fu Fa" class="menu-img">
+                <h3 class="menu-item-title">豆腐花 - Tew Fu Fa</h3>
+                <p class="menu-item-desc">Tew Fu Fa ini makanan yg sehat, karna dibuat dari susu kedelai, dimakan sama wedang jahe.</p>
+                <span class="menu-item-price">Pelajari lebih lanjut</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3 class="footer-title">豆腐水 - Tew Fu Sui</h3>
+                <p class="footer-desc">豆腐 = doufu/tahu 水 = shui/air</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Instagram</a>
+                <a href="#" class="footer-link">Facebook</a>
+                <a href="#" class="footer-link">X.com</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 豆腐水 - Tew Fu Sui. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

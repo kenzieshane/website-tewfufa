@@ -12,6 +12,7 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  scroll-padding-top: 8rem;
 }
 
 .serif {
@@ -44,7 +45,7 @@ body {
   position: fixed;
   width: 100%;
   z-index: 50;
-  background: rgba(146, 146, 146, 0.575);
+  background: rgba(26, 46, 26, 0.95);
   backdrop-filter: blur(10px);
   color: white;
   padding: 1rem 1.5rem;
@@ -66,16 +67,23 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   font-family: serif;
-  letter-spacing: 0em;
+  letter-spacing: 0.1em;
   color: #f4f1ea;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin-bottom: 0;
+  }
 }
 
 .menu {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1.5rem;
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   align-items: center;
 }
@@ -86,19 +94,26 @@ body {
 
 @media (min-width: 768px) {
   .menu {
-    gap: 1rem;
-    font-size: 0.75rem;
+    gap: 2rem;
+    font-size: 0.85rem;
     letter-spacing: 0.2em;
   }
 }
 
 .link {
   color: white;
-  transition: color 0.3s;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-decoration: none;
+  position: relative;
 }
 
 .link:hover {
   color: #bc6c25;
+}
+
+.link:focus {
+  outline: 2px solid #bc6c25;
+  outline-offset: 2px;
 }
 
 /* Hero */
@@ -126,8 +141,9 @@ body {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -148,18 +164,29 @@ body {
   margin-top: 2.5rem;
   display: inline-block;
   padding: 1rem 2.5rem;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   font-weight: bold;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .hero-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: #bc6c25;
+  border-color: #bc6c25;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:focus {
+  outline: 2px solid #bc6c25;
+  outline-offset: 3px;
 }
 
 /* About */
@@ -428,7 +455,7 @@ body {
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1.5rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-weight: bold;
@@ -439,6 +466,12 @@ body {
 
 .form-btn:hover {
   background-color: #a65d1d;
+  transform: translateY(-2px);
+}
+
+.form-btn:focus {
+  outline: 2px solid #f4f1ea;
+  outline-offset: 2px;
 }
 
 /* Footer */
@@ -497,11 +530,17 @@ body {
 
 .footer-link {
   color: #9ca3af;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer-link:hover {
-  color: white;
+  color: #bc6c25;
+}
+
+.footer-link:focus {
+  outline: 2px solid #bc6c25;
+  outline-offset: 2px;
 }
 
 .footer-copyright {

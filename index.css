@@ -316,7 +316,7 @@ body {
 }
 
 .about-text {
-  color: #374151;
+  color: #5a4a42;
   line-height: 1.625;
   margin-bottom: 1.5rem;
 }
@@ -392,7 +392,7 @@ body {
 }
 
 .menu-card {
-  background-color: #243a24;
+  background-color: #2d4a2b;
   padding: 1rem;
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -418,7 +418,7 @@ body {
 }
 
 .menu-item-desc {
-  color: #9ca3af;
+  color: #a8b995;
   font-size: 0.875rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -524,7 +524,7 @@ body {
   width: 100%;
   padding: 0.75rem;
   background-color: transparent;
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid #d4c9b8;
   outline: none;
   transition: border-color 0.3s;
 }
@@ -570,7 +570,7 @@ body {
   background-color: #1a2e1a;
   color: white;
   padding: 3rem 1.5rem;
-  border-top: 1px solid #243a24;
+  border-top: 1px solid #2d4a2b;
 }
 
 .footer-container {
@@ -609,7 +609,7 @@ body {
 
 .footer-desc {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #8b7355;
   font-style: italic;
   max-width: 20rem;
 }
@@ -620,7 +620,7 @@ body {
 }
 
 .footer-link {
-  color: #9ca3af;
+  color: #a8b995;
   transition: color 0.3s ease;
   text-decoration: none;
 }
@@ -639,7 +639,7 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  color: #4b5563;
+  color: #5a4a42;
 }
 
 @media (min-width: 768px) {

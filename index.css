@@ -48,19 +48,18 @@ body {
   background: rgba(26, 46, 26, 0.95);
   backdrop-filter: blur(10px);
   color: white;
-  padding: 1rem 1.5rem;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
   box-sizing: border-box;
+  top: 0;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-    align-items: center;
-  }
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -69,35 +68,63 @@ body {
   font-family: serif;
   letter-spacing: 0.1em;
   color: #f4f1ea;
-  margin-bottom: 0.5rem;
+  margin: 0;
+  flex-shrink: 0;
 }
 
-@media (min-width: 768px) {
-  .logo {
-    margin-bottom: 0;
-  }
+.logo a {
+  color: #f4f1ea;
+  text-decoration: none;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 24px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #f4f1ea;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu */
 .menu {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 2rem;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
   align-items: center;
 }
 
 .menu a {
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .menu {
-    gap: 2rem;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-  }
 }
 
 .link {
@@ -114,6 +141,70 @@ body {
 .link:focus {
   outline: 2px solid #bc6c25;
   outline-offset: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-container {
+    padding: 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(26, 46, 26, 0.98);
+    backdrop-filter: blur(10px);
+    gap: 0;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    display: block;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+  }
+
+  .menu a:last-child {
+    border-bottom: none;
+  }
+
+  .menu a:hover {
+    background-color: rgba(188, 108, 37, 0.2);
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .menu {
+    display: flex;
+  }
 }
 
 /* Hero */

@@ -51,16 +51,41 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo"><a href="index.html" style="color: #f4f1ea; text-decoration: none;">豆腐水</a></div>
-        <div class="menu" id="menu">
-            <a href="index.html" class="link">Beranda</a>
-            <a href="history.html" class="link">Sejarah</a>
-            <a href="benefits.html" class="link">Khasiat</a>
-            <a href="composition.html" class="link">Komposisi</a>
-            <a href="recipe.html" class="link">Resep</a>
-            <a href="how-to-cook.html" class="link">Cara Memasak</a>
+        <div class="navbar-container">
+            <div class="logo"><a href="index.html" style="color: #f4f1ea; text-decoration: none;">豆腐水</a></div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu" id="menu">
+                <a href="index.html" class="link">Beranda</a>
+                <a href="history.html" class="link">Sejarah</a>
+                <a href="benefits.html" class="link">Khasiat</a>
+                <a href="composition.html" class="link">Komposisi</a>
+                <a href="recipe.html" class="link">Resep</a>
+                <a href="how-to-cook.html" class="link">Cara Memasak</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const navLinks = document.querySelectorAll('.menu .link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 
     <!-- Page Title Section -->
     <section class="page-hero" style="background: linear-gradient(rgba(26, 46, 26, 0.7), rgba(26, 46, 26, 0.7)), url('https://images.unsplash.com/photo-1576671160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop'); background-size: cover; background-position: center; min-height: 40vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
